@@ -10,7 +10,7 @@ from django.utils import timezone
 
 # Create your views here.
 
-#view for customer creation
+#view for customer creation and view customers list
 class CustomerListCreateView(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
@@ -22,13 +22,13 @@ class CustomerRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CustomerSerializer
 
 
-#view for product creation
+#view for product creation and view products list
 class ProductListCreateView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
 
-#view for customer CRUD operations
+#view for product retrieve,update,delete operations
 class ProductRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
